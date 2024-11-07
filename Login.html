@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Login.css">
+    <title>Login</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login-card">
+            
+            <img src="imagens/Logo.png" class="login-logo">
+
+            <form id="loginForm">
+                <div class="input-group">
+                    <label for="e-mail">E-mail</label>
+                    <input type="text" id="usuario" name="usuario" placeholder="Digite seu E-mail" required>
+                </div>
+                <div class="input-group">
+                    <label for="senha">Senha</label>
+                    <input type="password" id="senha" name="senha" placeholder="Digite sua senha" required>
+                </div>
+                <button type="submit" class="btn-login">Entrar</button>
+                <div id="loginStatus"></div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-auth-compat.js"></script>
+    <script src="Log.js"></script>
+    <script>
+        const firebaseConfig = {
+            apiKey: "AIzaSyDW_dJWIYWbA_YfbC7xUp-0aqxmWXuKEQg",
+            authDomain: "controle-de-epi-a1928.firebaseapp.com",
+            projectId: "controle-de-epi-a1928",
+            storageBucket: "controle-de-epi-a1928.appspot.com",
+            messagingSenderId: "232965550074",
+            appId: "1:232965550074:web:439dcba994af5733a87e43"
+        };
+        firebase.initializeApp(firebaseConfig); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega de EPI - Controle de EPIs</title>
+    <link rel="stylesheet" href="Entrega.css">
+</head>
+<body>
+    <div>
+        <h2>Registrar Entrega de EPI</h2>
+        <form id="formEPI">
+            <label for="funcionario">Funcionário:</label>
+            <input type="text" id="funcionario" name="funcionario" placeholder="Digite o nome do funcionário" required>
+
+            <label for="epi">EPI:</label>
+            <select id="epi" name="epi">
+                <option value="Luvas de Proteção">Luvas de Proteção</option>
+                <option value="Capacete de Segurança">Capacete de Segurança</option>
+            </select>
+
+            <label for="quantidade">Quantidade:</label>
+            <input type="number" id="quantidade" name="quantidade" required>
+
+            <label for="dataEntrega">Data de Entrega:</label>
+            <input type="date" id="dataEntrega" name="dataEntrega" required>
+
+            <button type="button" id="adicionarItem">Adicionar Item</button>
+        </form>
+
+        <h3>Itens Adicionados</h3>
+        <table id="tabelaItens">
+            <thead>
+                <tr>
+                    <th><input type="checkbox" id="selecionarTodos"> Selecionar Todos</th>
+                    <th>Funcionário</th>
+                    <th>EPI</th>
+                    <th>Quantidade</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+
+        <button type="button" id="btnregistrar">Registrar Entrega</button>
+    </div>
+
+    
+    <div class="historico-section">
+        <h2>Histórico de Entregas</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Funcionário</th>
+                    <th>EPI</th>
+                    <th>Quantidade</th>
+                    <th>Data</th>
+                </tr>
+            </thead>
+            <tbody id="historicoEntregas">
+            </tbody>
+        </table>
+    </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js"
+     integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" 
+     crossorigin="anonymous" referrerpolicy="no-referrer">
+    </script>
+    <script src="Entrega.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database.js"></script>
+    <script src= "Firebase.js"></script>
+</body>
+</html>

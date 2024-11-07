@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Funcionários</title>
+    <link rel="stylesheet" href="funcionario.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="btn-novo" onclick="abrirCadastro()">Novo</button>
+            <input type="text" id="pesquisa" onkeyup="filtrarFuncionarios()" placeholder="Pesquisar funcionário...">
+        </div>
+        
+        <table id="tabela-funcionarios">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João Silva</td>
+                    <td>Gerente</td>
+                    <td>
+                        <button class="btn-editar" onclick="editarFuncionario()">✏️</button>
+                        <button class="btn-excluir" onclick="excluirFuncionario()">🗑️</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Ana Souza</td>
+                    <td>Analista</td>
+                    <td>
+                        <button class="btn-editar" onclick="editarFuncionario()">✏️</button>
+                        <button class="btn-excluir" onclick="excluirFuncionario()">🗑️</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal de cadastro -->
+    <div id="modal-cadastro" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="fecharCadastro()">&times;</span>
+            <h2>Cadastrar Funcionário</h2>
+            <form id="cadastro-form">
+                <div class="input-group">
+                    <label for="nome">Nome Completo</label>
+                    <input type="text" id="nome" name="nome" placeholder="Digite o nome completo" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="telefone">Número de Telefone</label>
+                    <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="cpf">CPF</label>
+                    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="funcao">Função</label>
+                    <input type="text" id="funcao" name="funcao" placeholder="Ex: Analista, Gerente" required>
+                </div>
+
+                <div class="input-group">
+                    <label for="endereco">Onde Mora</label>
+                    <input type="text" id="endereco" name="endereco" placeholder="Endereço completo" required>
+                </div>
+
+                <button type="submit">Cadastrar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="funcionario.js"></script>
+</body>
+</html>

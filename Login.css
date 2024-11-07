@@ -1,0 +1,97 @@
+/* Estilo da página com imagem de fundo */
+body {
+    background-image: url('Imagens/6D_54.jpg'); 
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Container principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+}
+
+.login-card {
+    background: #070707;
+    border-radius: 12px;
+    box-shadow: 15px 15px 30px rgb(25, 25, 25),
+    -15px -15px 30px rgb(60, 60, 60);
+    width: 350px;
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+
+.login-logo {
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+
+/* Título */
+.login-card h1 {
+    margin-bottom: 1.5rem;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Grupo de input */
+.input-group {
+    margin-bottom: 1.5rem;
+    text-align: left;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #007bff;
+}
+
+/* Botão de login */
+.btn-login {
+    background-color: #000000; /* Cor preta */
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%;
+}
+
+.btn-login:hover {
+    background-color: #444444; /* Efeito no hover */
+}
+
+@media (max-width: 480px) {
+    .login-card {
+        width: 90%;
+        padding: 1.5rem;
+    }
+}

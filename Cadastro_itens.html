@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Cadastro de Itens</title>
+    <link rel="stylesheet" href="Cadastro_itens.css"> 
+</head>
+<body>
+    <div class="form-container">
+        <h2>Cadastro de Item</h2>
+        <form action="#" method="POST">
+            <label for="nome_item">Nome do Item:</label>
+            <input type="text" id="nome_item" name="nome_item" placeholder="Insira o nome do item" required>
+
+            <label for="descricao_item">Descrição:</label>
+            <textarea id="descricao_item" name="descricao_item" placeholder="Insira uma descrição do item" required></textarea>
+
+            <label for="categoria_item">Categoria:</label>
+            <select id="categoria_item" name="categoria_item" required>
+                <option value="" disabled selected>Selecione a categoria</option>
+                <option value="equipamento">Equipamento</option>
+                <option value="material">Material</option>
+                <option value="ferramenta">Ferramenta</option>
+            </select>
+
+            <label for="tipo_epi">Tipo de EPI:</label>
+            <select id="tipo_epi" name="tipo_epi" required>
+                <option value="" disabled selected>Selecione o tipo de EPI</option>
+                <option value="Capacete"> Capacete </option>
+                <option value="Óculos de Proteção">Óculos de Proteção</option>
+                <option value="proteção_auditiva">Proteção Auditiva</option>
+                <option value="Máscaras">Máscaras</option>
+                <option value="Luvas">Luvas</option>
+                <option value="Botinas">Botinas</option>
+            </select>
+
+            <label for="quantidade_item">Quantidade:</label>
+            <input type="number" id="quantidade_item" name="quantidade_item" placeholder="Insira a quantidade disponível" required>
+
+            <label for="data_aquisicao">Data de Aquisição:</label>
+            <input type="date" id="data_aquisicao" name="data_aquisicao" required>
+
+            <label for="Validade">Período de Validade:</label>
+            <select id="validade" name="validade" required>
+                <option value="" disabled selected>Selecione o Período de Validade</option>
+                <option value="Diario"> 1 Dia </option>
+                <option value="3meses"> 3 Meses </option>
+                <option value="6meses"> 6 Meses </option>
+                <option value="1ano"> 1 Ano </option>
+            </select>
+                
+            <button type="submit">Cadastrar Item</button>
+            <a href="dashboard.html" class="back-button">Voltar</a>
+        </form>
+    </div>
+</body>
+</html>

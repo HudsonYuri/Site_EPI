@@ -1,0 +1,131 @@
+/* Resetando padrões */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo geral da página */
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f0f2f5;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 250px;
+    height: 100vh;
+    background-color: #000; /* Preto */
+    color: #FFD700; /* Amarelo Ouro */
+    padding: 20px;
+}
+
+.sidebar-header {
+    text-align: center;
+    font-size: 22px;
+    margin-bottom: 30px;
+}
+
+.sidebar ul {
+    list-style-type: none;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    color: #FFD700; /* Amarelo Ouro */
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.sidebar ul li a i {
+    margin-right: 10px;
+}
+
+.sidebar ul li a:hover {
+    background-color: rgba(255, 215, 0, 0.2); /* Fundo amarelo claro ao passar o mouse */
+    padding: 10px;
+    border-radius: 8px;
+    transform: translateX(10px);
+}
+
+/* Conteúdo da página */
+#content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.dashboard-header {
+    background-color: #FFD700; /* Amarelo Ouro */
+    color: #000; /* Preto */
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.dashboard-header h1 {
+    font-weight: 600;
+    font-size: 28px;
+}
+
+/* Estilo dos Widgets */
+.dashboard-widgets {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.widget {
+    background-color: #000; /* Preto */
+    padding: 20px;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.widget:hover {
+    transform: scale(1.05);
+}
+
+.widget h3 {
+    font-size: 18px;
+    color: #FFD700; /* Amarelo Ouro */
+    margin-bottom: 10px;
+}
+
+.widget p {
+    font-size: 24px;
+    color: #FFD700; /* Amarelo Ouro */
+    font-weight: bold;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.progress {
+    background-color: #FFD700; /* Amarelo Ouro */
+    height: 10px;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+/* Mobile Responsivo */
+@media (max-width: 768px) {
+    .dashboard-widgets {
+        grid-template-columns: 1fr;
+    }
+}
